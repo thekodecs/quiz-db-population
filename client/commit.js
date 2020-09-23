@@ -6,6 +6,8 @@ const additionalElB = document.querySelector('#field-answer-incorrect-1');
 const additionalElC = document.querySelector('#field-answer-incorrect-2');
 const additionalElD = document.querySelector('#field-answer-incorrect-3');
 
+//const API_URL = (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost")
+
 
 
 
