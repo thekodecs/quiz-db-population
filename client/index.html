@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./ styles/main.css">
+
+    <title>Добавить свой вопрос</title>
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1 class="display-4">Дополни базу вопросов</h1>
+      <p class="lead">Ниже можно сформулировать вопрос и указать сначала правильный ответ, а за ним три неверных ответа, для массовки.</p>
+      <hr class="my-4">
+      <p>Форма создания нового вопроса:</p>
+      <form action="submit" method="post" class="submit-form" id="form-question-data">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text">Текст вопроса</span>
+          </div>
+          <textarea class="form-control" id="field-question" aria-label="With textarea"></textarea>
+        </div>
+    
+        Варианты ответов:
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text answer answer-correct" id="answer-correct">Правильный</span>
+          </div>
+          <input type="text" class="form-control" id="field-answer-correct" placeholder="Ответ" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text answer answer-incorrect" id="answer-incorrect-1">Дополнительный</span>
+          </div>
+          <input type="text" class="form-control" id="field-answer-incorrect-1" placeholder="Ответ" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text answer answer-incorrect" id="answer-incorrect-2">Дополнительный</span>
+          </div>
+          <input type="text" class="form-control" id="field-answer-incorrect-2" placeholder="Ответ" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <div class="input-group mb-3">
+          <div class="input-group-prepend">
+            <span class="input-group-text answer answer-incorrect" id="answer-incorrect-3">Дополнительный</span>
+          </div>
+          <input type="text" class="form-control" id="field-answer-incorrect-3" placeholder="Ответ" aria-label="Username" aria-describedby="basic-addon1">
+        </div>
+        <a class="btn btn-primary btn-lg btn-block" href="#" role="button" onclick="commitQuestion()">Добавить!</a>
+      </form>
+    </div>
+    
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="commit.js" defer></script>
+  </body>
+</html>
