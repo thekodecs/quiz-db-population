@@ -38,6 +38,5 @@ function commitQuestion(){
           'Content-Type': 'application/json'
         }
       });
-      const responseJson = response.json();
-      console.log('Успех:', JSON.stringify(responseJson));
+      console.log('Успех:');
 }
