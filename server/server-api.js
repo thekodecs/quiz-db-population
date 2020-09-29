@@ -21,5 +21,5 @@ app.listen(port, () => {
     console.log(`App running on port ${port}...`);
 });
 
-app.get('/questions', db.getUsers);
+app.get('/questions', db.getQuestions);
 

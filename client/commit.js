@@ -22,6 +22,7 @@ function commitQuestion(){
     const a_d = additionalElD.value;
     
     const question = {
+        added_by_user,
         q_text,
         a_correct,
         a_b,
