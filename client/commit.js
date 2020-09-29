@@ -38,5 +38,13 @@ function commitQuestion(){
           'Content-Type': 'application/json'
         }
       });
-      console.log('Успех:');
+    console.log('Успех:');
+    addedByUserEl.value = "";
+    questionEl.value = "";
+    сorrectEl.value = "";
+
+    
+    additionalElB.value = "";
+    additionalElC.value = "";
+    additionalElD.value = "";
 }
