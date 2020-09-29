@@ -21,7 +21,7 @@ const getQuestions = (request, response) => {
 const postQuestion = (request, response) => {
     const { added_by_user, q_text, a_correct, a_b, a_c, a_d } = request.body
   
-    pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user) VALUES ($1, $2, $3, $4, $5', [q_text, a_correct, a_b, a_c, a_d, added_by_user], (error, results) => {
+    pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user) VALUES ($1, $2, $3, $4, $5);', [q_text, a_correct, a_b, a_c, a_d, added_by_user], (error, results) => {
       if (error) {
         throw error
       }
