@@ -1,7 +1,7 @@
-require('express')
-require('body-parser')
-const app = express()
-const port = 3000
+require('express');
+require('body-parser');
+const app = express();
+const port = 3000;
 
 app.use(json())
 app.use(
