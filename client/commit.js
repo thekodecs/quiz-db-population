@@ -1,7 +1,7 @@
 const questionForm = document.querySelector('#form-question-data');
 const questionEl = document.getElementById('field-question');
 const correctEl = document.getElementById('field-answer-correct');
-const addedByUserEl = document.getElementById('field-added-by-user');
+const addedByUserEl = document.getElementById('field-added-by-username');
 
 const additionalElB = document.querySelector('#field-answer-incorrect-1');
 const additionalElC = document.querySelector('#field-answer-incorrect-2');
