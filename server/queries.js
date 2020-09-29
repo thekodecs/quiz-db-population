@@ -9,7 +9,7 @@ const pool = new Pool({
 });
 
 const getQuestions = (request, response) => {
-    console.log(`USERNAME: ${process.env.dev_psql_user} PWD ${process.env.dev_psql_pwd}`);
+    //console.log(`USERNAME: ${process.env.dev_psql_user} PWD ${process.env.dev_psql_pwd}`);
     pool.query(`SELECT * FROM questions`, (error, results) => {
       if (error) {
         throw error
@@ -20,7 +20,7 @@ const getQuestions = (request, response) => {
 
 const postQuestion = (request, response) => {
     const { added_by_user, q_text, a_correct, a_b, a_c, a_d } = request.body
-    console.log(`USERNAME: ${process.env.dev_psql_user} PWD ${process.env.dev_psql_pwd}`);
+    //console.log(`USERNAME: ${process.env.dev_psql_user} PWD ${process.env.dev_psql_pwd}`);
     pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user) VALUES ($1, $2, $3, $4, $5, $6);', [q_text, a_correct, a_b, a_c, a_d, added_by_user], (error, results) => {
       if (error) {
         throw error
