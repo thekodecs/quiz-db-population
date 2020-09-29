@@ -15,7 +15,7 @@ app.get('/styles/main.css', (request, response) => {
 });
 
 app.get('/commit.js', (request, response) => {
-    response.sendFile(path.join(__dirname+'commit.js'));
+    response.sendFile(path.join(__dirname+'/commit.js'));
 });
 
 app.listen(port);
