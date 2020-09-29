@@ -30,7 +30,7 @@ function commitQuestion(){
         a_c,
         a_d
     };
-
+    console.log(JSON.stringify(question));
     const response = fetch(`${API_URL}/questions`, {
         method: 'POST', // или 'PUT'
         body: JSON.stringify(question), // данные могут быть 'строкой' или {объектом}!
