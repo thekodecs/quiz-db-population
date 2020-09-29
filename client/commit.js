@@ -41,7 +41,7 @@ function commitQuestion(){
     console.log('Успех:');
     addedByUserEl.value = "";
     questionEl.value = "";
-    сorrectEl.value = "";
+    correctEl.value = "";
 
     
     additionalElB.value = "";
