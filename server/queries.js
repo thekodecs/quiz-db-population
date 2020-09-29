@@ -1,4 +1,5 @@
 const Pool = require('pg').Pool;
+const env = require('dotenv').config();
 const pool = new Pool({
   user: process.env.psql_user,
   host: 'localhost',
