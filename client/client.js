@@ -10,4 +10,12 @@ app.get('/', (request, response) => {
     response.sendFile(path.join(__dirname+'/index.html'));
 });
 
+app.get('/styles/main.css', (request, response) => {
+    response.sendFile(path.join(__dirname+'/styles/main.css'));
+});
+
+app.get('/commit.js', (request, response) => {
+    response.sendFile(path.join(__dirname+'commit.js'));
+});
+
 app.listen(port);
