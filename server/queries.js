@@ -1,10 +1,10 @@
 const Pool = require('pg').Pool;
 const env = require('dotenv').config();
 const pool = new Pool({
-  user: process.env.psql_user,
+  user: process.env.dev_psql_user,
   host: 'localhost',
   database: 'thekodecs',
-  password: process.env.psql_pwd,
+  password: process.env.dev_psql_user,
   port: 5432,
 });
 
