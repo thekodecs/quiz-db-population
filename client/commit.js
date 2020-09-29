@@ -7,7 +7,7 @@ const additionalElB = document.querySelector('#field-answer-incorrect-1');
 const additionalElC = document.querySelector('#field-answer-incorrect-2');
 const additionalElD = document.querySelector('#field-answer-incorrect-3');
 
-//const API_URL = (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost")
+const API_URL = 'http://185.65.202.37:3000'
 
 
 
@@ -31,5 +31,13 @@ function commitQuestion(){
         a_d
     };
 
-    alert(JSON.stringify(question));
+    const response = await fetch(`${API_URL}/questions`, {
+        method: 'POST', // или 'PUT'
+        body: JSON.stringify(question), // данные могут быть 'строкой' или {объектом}!
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      });
+      const responseJson = await response.json();
+      console.log('Успех:', JSON.stringify(responseJson));
 }
