@@ -1,3 +1,4 @@
 /.vscode
 server/server-api.js
-#server/queries.js
+server/queries.js
+server/.env
