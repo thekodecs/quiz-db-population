@@ -31,13 +31,13 @@ function commitQuestion(){
         a_d
     };
 
-    const response = await fetch(`${API_URL}/questions`, {
+    const response = fetch(`${API_URL}/questions`, {
         method: 'POST', // или 'PUT'
         body: JSON.stringify(question), // данные могут быть 'строкой' или {объектом}!
         headers: {
           'Content-Type': 'application/json'
         }
       });
-      const responseJson = await response.json();
+      const responseJson = response.json();
       console.log('Успех:', JSON.stringify(responseJson));
 }
