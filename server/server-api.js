@@ -22,5 +22,5 @@ app.listen(port, () => {
 });
 
 app.get('/questions', db.getQuestions);
-app.post('/users', db.postQuestion);
+app.post('/questions', db.postQuestion);
 
