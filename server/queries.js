@@ -1,5 +1,5 @@
-import express from 'express'
-import { json, urlencoded } from 'body-parser'
+require('express')
+require('body-parser')
 const app = express()
 const port = 3000
 
