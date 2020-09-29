@@ -3,6 +3,7 @@ const cors = require('cors');
 const path = require('path');
 app = express();
 const port = 3001;
+app.use(express.static(' styles'));
 app.use(cors());
 
 app.get('/', (request, response) => {
