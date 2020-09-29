@@ -10,7 +10,7 @@ const pool = new Pool({
 
 const getUsers = (request, response) => {
     console.log(`USERNAME: ${process.env.dev_psql_user} PWD ${process.env.dev_psql_pwd}`);
-    pool.query(`SELECT * FROM questions ORDER BY id ASC`, (error, results) => {
+    pool.query(`SELECT * FROM questions`, (error, results) => {
       if (error) {
         throw error
       }
