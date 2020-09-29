@@ -18,11 +18,11 @@
       <hr class="my-4">
       <p>Форма создания нового вопроса:</p>
       <form action="submit" method="post" class="submit-form" id="form-question-data">
-        <div class="input-group">
+        <div class="input-group mb-3">
           <div class="input-group-prepend">
-            <span class="input-group-text">Ваш псевдоним</span>
+            <span class="input-group-text answer answer-correct" id="answer-correct">Ваше имя</span>
           </div>
-          <textarea class="form-control" id="field-question" aria-label="With textarea"></textarea>
+          <input type="text" class="form-control" id="field-answer-correct" placeholder="Ответ" aria-label="Username" aria-describedby="basic-addon1">
         </div>
 
         <div class="input-group">
