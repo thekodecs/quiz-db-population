@@ -4,6 +4,7 @@ const app = express();
 const port = 3000;
 
 const db = require('./queries');
+require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(
