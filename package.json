@@ -1,0 +1,29 @@
+{
+  "name": "quiz-db-population",
+  "version": "1.0.0",
+  "description": "im learning",
+  "main": "server-api.js",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-rate-limit": "^5.1.3",
+    "mongo": "^0.1.0",
+    "mongodb": "^3.6.2",
+    "monk": "^7.3.2",
+    "vercel": "^20.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "nodemon server-api.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thekodecs/quiz-db-population.git"
+  },
+  "author": "thekodecs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thekodecs/quiz-db-population/issues"
+  },
+  "homepage": "https://github.com/thekodecs/quiz-db-population#readme"
+}

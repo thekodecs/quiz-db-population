@@ -5,4 +5,3 @@ const rateLimit = require('express-rate-limit');
 
 const app = express();
 
-const db = monk();
