@@ -44,11 +44,15 @@ function convertDateIntoPostgres(date) {
   }
 
   return [
-    parsed.getUTCFullYear(), 
-    zeroPad(parsed.getMonth() + 1), 
-    zeroPad(parsed.getDate()), 
-    zeroPad(parsed.getHours()), 
-    zeroPad(parsed.getMinutes()), 
-    zeroPad(parsed.getSeconds())
+    [
+      parsed.getUTCFullYear(), 
+      zeroPad(parsed.getMonth() + 1), 
+      zeroPad(parsed.getDate())
+    ].join("-"),
+    [
+      zeroPad(parsed.getHours()), 
+      zeroPad(parsed.getMinutes()), 
+      zeroPad(parsed.getSeconds())
+    ].join(":")
   ].join(" ");
 }
