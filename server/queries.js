@@ -23,7 +23,8 @@ const postQuestion = (request, response) => {
     const psqlDate = convertDateIntoPostgres(new Date());
     console.log(`DATE: ${new Date()} POSTGRESS DATE: ${psqlDate}`);
     //console.log(`USERNAME: ${process.env.dev_psql_user} PWD ${process.env.dev_psql_pwd}`);
-    pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user, added_date) VALUES ($1, $2, $3, $4, $5, $6, $7);', [q_text, a_correct, a_b, a_c, a_d, added_by_user, psqlDate], (error, results) => {
+    //pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user, added_date) VALUES ($1, $2, $3, $4, $5, $6, $7);', [q_text, a_correct, a_b, a_c, a_d, added_by_user, psqlDate], (error, results) => {
+    pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user) VALUES ($1, $2, $3, $4, $5, $6);', [q_text, a_correct, a_b, a_c, a_d, added_by_user], (error, results) => {
     if (error) {
       throw error
     }
