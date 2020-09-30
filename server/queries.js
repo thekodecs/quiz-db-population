@@ -19,17 +19,36 @@ const getQuestions = (request, response) => {
 }
 
 const postQuestion = (request, response) => {
-    const { added_by_user, q_text, a_correct, a_b, a_c, a_d } = request.body
+    const { added_by_user, q_text, a_correct, a_b, a_c, a_d } = request.body;
+    const psqlDate = convertDateIntoPostgres(new Date());
+    console.log(`DATE: ${new Date()} POSTGRESS DATE: ${psqlDate}`);
     //console.log(`USERNAME: ${process.env.dev_psql_user} PWD ${process.env.dev_psql_pwd}`);
-    pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user) VALUES ($1, $2, $3, $4, $5, $6);', [q_text, a_correct, a_b, a_c, a_d, added_by_user], (error, results) => {
-      if (error) {
-        throw error
-      }
-      response.status(201).send(`User added with ID: ${results.insertId}`)
-    })
+    pool.query('INSERT INTO questions (q_text, a_correct, a_b, a_c, a_d, added_by_user, added_date) VALUES ($1, $2, $3, $4, $5, $6, $7);', [q_text, a_correct, a_b, a_c, a_d, added_by_user, psqlDate], (error, results) => {
+    if (error) {
+      throw error
+    }
+    response.status(201).send(`User added with ID: ${results.insertId}`)
+  })
+}
+
+module.exports = {
+  getQuestions,
+  postQuestion
+}
+
+function convertDateIntoPostgres(date) {
+  const parsed = new Date(date);
+
+  function zeroPad(d) {
+    return ('0' + d).slice(-2);
   }
 
-  module.exports = {
-      getQuestions,
-      postQuestion
-  }
+  return [
+    parsed.getUTCFullYear(), 
+    zeroPad(parsed.getMonth() + 1), 
+    zeroPad(parsed.getDate()), 
+    zeroPad(parsed.getHours()), 
+    zeroPad(parsed.getMinutes()), 
+    zeroPad(parsed.getSeconds())
+  ].join(" ");
+}
